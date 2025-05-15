@@ -1,92 +1,89 @@
-# Groupe de gueneb_a 1054267
+# JUSTE PRIX
+# Objectifs
+Créer un petit jeu en TypeScript, inspiré du concept du Juste Prix, dans lequel l'utilisateur doit deviner un nombre généré aléatoirement par l'ordinateur, avec un nombre de tentatives limité.
 
+# Consignes
+🎮 Principe du jeu :
 
+Le programme génère un nombre cible aléatoire entre 1 et 100.
+L’utilisateur tente de deviner ce nombre en entrant des propositions.
+À chaque tentative, l’ordinateur indique si le nombre proposé est trop haut, trop bas ou correct.
+✅ Tâches à réaliser :
 
-## Getting started
+1. Générer un nombre aléatoire entre 1 et 100.
+2. Permettre à l’utilisateur d’entrer un nombre.
+3. Comparer le nombre proposé avec le nombre cible.
+4. Afficher un message : “Trop haut”, “Trop bas” ou “Bravo !”.
+5. Si l’utilisateur trouve le bon nombre ou atteint la limite d’essais (10 par défaut), afficher le résultat final et proposer de rejouer.
+💻 Interface utilisateur (console) :
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+Le jeu doit s’exécuter dans le terminal (via `ts-node` ou compilé avec Node.js).
+Des messages interactifs doivent guider l’utilisateur à chaque tour.
+⚠️ Gestion des erreurs :
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+Vérifier que l’entrée de l’utilisateur est bien un nombre.
+Empêcher les caractères invalides ou lettres d’être interprétés.
+Limiter à 10 tentatives maximum pour plus de défi.
+🧭 Étapes proposées :
 
-## Add your files
+Initialiser le nombre cible avec Math.floor(Math.random() * 100) + 1.
+Créer une boucle demandant une saisie utilisateur avec readline ou prompt-sync.
+Comparer la valeur entrée avec la cible.
+Compter les essais et gérer les cas de victoire/défaite.
+Proposer de rejouer à la fin de la partie.
+🔗 Ressources utiles :
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+Librairies Node.js pour la lecture console (readline, prompt-sync).
+Utilisation des types TypeScript pour sécuriser les entrées.
+✅ Bonus
+Plage personnalisée : Laisser le joueur choisir les bornes min et max du nombre à deviner (ex: entre 1 et 500).
+Mode difficile : Limiter les essais à 5.
+Score et statistiques : Implémenter un score cumulé, afficher les victoires/défaites, et proposer une fonctionnalité de "rejouer".
 
-```
-cd existing_repo
-git remote add origin https://rendu-git.etna-alternance.net/module-9952/activity-53424/group-1054267.git
-git branch -M main
-git push -uf origin main
-```
+# LE COMPTE EST BON
+# Objectifs
+Créer un mini-jeu en TypeScript inspiré du jeu télévisé Le Compte est Bon, où vous devrez atteindre un nombre cible en combinant un ensemble de nombres avec des opérations mathématiques de base (+, -, *, /), directement en ligne de commande.
 
-## Integrate with your tools
+# Consignes
+🎮 Principe du jeu :
 
-- [ ] [Set up project integrations](https://rendu-git.etna-alternance.net/module-9952/activity-53424/group-1054267/-/settings/integrations)
+Le programme génère un nombre cible aléatoire entre 1 et 100.
+Il génère ensuite 5 nombres aléatoires compris entre 1 et 20.
+Le joueur doit tenter d’atteindre le nombre cible en combinant les nombres avec des opérations mathématiques de base.
+🧪 Exemple :
 
-## Collaborate with your team
+Nombre cible : 75
+Nombres donnés : [3, 10, 5, 15, 7]
+Exemple d'opération possible : (10 * 7) + 5
+✅ Tâches principales :
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+1. Générer un nombre cible aléatoire.
+2. Générer 5 nombres aléatoires.
+3. Permettre à l'utilisateur de saisir une expression (ex: 10 * 7 + 5).
+4. Calculer et afficher le résultat à chaque tentative.
+5. Indiquer si le nombre cible est atteint ou non.
+💻 Interface utilisateur (console) :
 
-## Test and Deploy
+Le jeu se joue en terminal, via ts-node ou un fichier compilé.
+Le joueur peut entrer une opération utilisant les nombres fournis, deux par deux, jusqu’à atteindre le résultat ou abandonner.
+⚠️ Gestion des erreurs :
 
-Use the built-in continuous integration in GitLab.
+Empêcher les divisions par zéro.
+Vérifier que seuls les nombres disponibles sont utilisés.
+Empêcher les opérations non valides (syntaxe incorrecte, caractères interdits, etc.).
+🧭 Étapes recommandées :
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+Créer la génération aléatoire du nombre cible (entre 1 et 100).
+Créer un tableau de 5 nombres aléatoires entre 1 et 20.
+Afficher les nombres disponibles et le nombre cible à l’utilisateur.
+Lire une expression entrée par l’utilisateur (via `readline` ou `prompt-sync`).
+Évaluer l’expression mathématique (sans utiliser `eval`).
+Afficher le résultat et indiquer si la cible est atteinte.
+🔗 Ressources utiles :
 
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Modules Node.js comme readline ou prompt-sync.
+Parsing d’expressions mathématiques en TypeScript (ex: via une librairie type-safe ou fonction maison).
+✅ Bonus
+Limiter le nombre d’essais : Autoriser 5 essais maximum pour deviner le bon résultat.
+Personnalisation : Proposer à l'utilisateur de choisir les plages de valeurs pour les nombres générés.
+Mode score : Ajouter un score cumulatif, avec la possibilité de rejouer plusieurs parties consécutives.
