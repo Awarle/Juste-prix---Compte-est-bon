@@ -51,7 +51,7 @@ Score et statistiques : Implémenter un score cumulé, afficher les victoires/d�
 Créer un mini-jeu en TypeScript inspiré du jeu télévisé Le Compte est Bon, où vous devrez atteindre un nombre cible en combinant un ensemble de nombres avec des opérations mathématiques de base (+, -, *, /), directement en ligne de commande.
 
 # Consignes
-🎮 Principe du jeu :
+# 🎮 Principe du jeu :
 
 Le programme génère un nombre cible aléatoire entre 1 et 100.
 Il génère ensuite 5 nombres aléatoires compris entre 1 et 20.
