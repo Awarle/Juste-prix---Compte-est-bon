@@ -1,5 +1,5 @@
 # JUSTE PRIX
-# Objectifs
+# Objectifs :
 Créer un petit jeu en TypeScript, inspiré du concept du Juste Prix, dans lequel l'utilisateur doit deviner un nombre généré aléatoirement par l'ordinateur, avec un nombre de tentatives limité.
 
 # Consignes
@@ -41,16 +41,16 @@ Proposer de rejouer à la fin de la partie.
 Librairies Node.js pour la lecture console (readline, prompt-sync).
 Utilisation des types TypeScript pour sécuriser les entrées.
 
-# ✅ Bonus
+# ✅ Bonus :
 Plage personnalisée : Laisser le joueur choisir les bornes min et max du nombre à deviner (ex: entre 1 et 500).
 Mode difficile : Limiter les essais à 5.
 Score et statistiques : Implémenter un score cumulé, afficher les victoires/défaites, et proposer une fonctionnalité de "rejouer".
 
 # LE COMPTE EST BON
-# Objectifs
+# Objectifs :
 Créer un mini-jeu en TypeScript inspiré du jeu télévisé Le Compte est Bon, où vous devrez atteindre un nombre cible en combinant un ensemble de nombres avec des opérations mathématiques de base (+, -, *, /), directement en ligne de commande.
 
-# Consignes
+# Consignes :
 # 🎮 Principe du jeu :
 
 Le programme génère un nombre cible aléatoire entre 1 et 100.
@@ -96,7 +96,7 @@ Afficher le résultat et indiquer si la cible est atteinte.
 Modules Node.js comme readline ou prompt-sync.
 Parsing d’expressions mathématiques en TypeScript (ex: via une librairie type-safe ou fonction maison).
 
-# ✅ Bonus
+# ✅ Bonus :
 Limiter le nombre d’essais : Autoriser 5 essais maximum pour deviner le bon résultat.
 Personnalisation : Proposer à l'utilisateur de choisir les plages de valeurs pour les nombres générés.
 Mode score : Ajouter un score cumulatif, avec la possibilité de rejouer plusieurs parties consécutives.
